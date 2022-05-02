@@ -1,3 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "MyFirstProgramm"
+mainClassName = "irina.jft.sandbox.Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.5'
+}
+
