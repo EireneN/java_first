@@ -31,9 +31,10 @@ public class Point {
         System.out.println("Sum AC + BC = " + sum);
         return sum;
     }
-    public void square (double sum){
+    public double square (double sum){
         double square = Math.sqrt(sum);
         System.out.println("Distance = " + square);
+        return square;
     }
 
 
@@ -41,6 +42,7 @@ public class Point {
         System.out.println("Координаты точки:" + " x = " + a.x + ", " + "y = " + a.y + "." );
     }
 
-}
+    }
+
 
 
