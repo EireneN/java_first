@@ -8,20 +8,20 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public void distance (Point p1, Point p2){
-        double bc = bc(p1, p2);
-        double ac = ac(p1, p2);
+    public double distance (Point p2){
+        double bc = bc(p2);
+        double ac = ac(p2);
         double sum = sum (ac, bc);
-        square(sum);
+        return square(sum);
     }
 
-    public double bc (Point p1, Point p2){
-        double bc = (p2.x - p1.x) * (p2.x - p1.x);
+    public double bc (Point p2){
+        double bc = (p2.x - x) * (p2.x - x);
         System.out.println("BC:" + " = " + bc);
         return bc;
     }
-    public double ac (Point p1, Point p2){
-        double ac = (p2.y - p1.y) * (p2.y - p1.y);
+    public double ac (Point p2){
+        double ac = (p2.y - y) * (p2.y - y);
         System.out.println("AC:" + " = " + ac);
         return ac;
     }
@@ -38,8 +38,12 @@ public class Point {
     }
 
 
-    public void printCoordinates (Point a) {
-        System.out.println("Координаты точки:" + " x = " + a.x + ", " + "y = " + a.y + "." );
+    public void printCoordinates () {
+        System.out.println("Координаты точки:" + " x = " + x + ", " + "y = " + y + "." );
+    }
+
+    public void printCoordinates (double x, double y) {
+        System.out.println("Координаты точки:" + " x = " + x + ", " + "y = " + y + "." );
     }
 
     }
