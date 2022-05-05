@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Перенос части кода в фикстуры">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupData.java" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Рефакторинг: создание вспомогательных методов">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests">
+  <component name="RunManager" selected="TestNG.NewContact">
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -149,6 +148,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.NewContact" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PointTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="sandbox.test" />
       <extension name="coverage">
@@ -160,24 +176,6 @@
       <option name="PACKAGE_NAME" value="irina.jft.sandbox" />
       <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.PointTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PointTest.testBc" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="irina.jft.sandbox.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="irina.jft.sandbox" />
-      <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.PointTest" />
-      <option name="METHOD_NAME" value="testBc" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -203,19 +201,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.PointTest.testBc" />
       <item itemvalue="TestNG.PointTest" />
       <item itemvalue="TestNG.PointTest.testDistance" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
+      <item itemvalue="TestNG.NewContact" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NewContact" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.PointTest.testDistance" />
         <item itemvalue="TestNG.PointTest" />
-        <item itemvalue="TestNG.PointTest.testBc" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651783265693</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Рефакторинг: создание вспомогательных методов">
+      <created>1651785767247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651785767247</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +297,8 @@
     <MESSAGE value="Записала тесты рекордером - работает)" />
     <MESSAGE value="Refactoring code" />
     <MESSAGE value="Перенос части кода в фикстуры" />
-    <option name="LAST_COMMIT_MESSAGE" value="Перенос части кода в фикстуры" />
+    <MESSAGE value="Рефакторинг: создание вспомогательных методов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг: создание вспомогательных методов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
