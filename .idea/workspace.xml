@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment=" Добавлены новые тесты NewContact">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Обновление фикстуры">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContact.java" afterDir="false" />
     </list>
@@ -282,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651788439412</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Обновление фикстуры">
+      <created>1651789103694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1651789103694</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,7 +313,8 @@
     <MESSAGE value="Перенос части кода в фикстуры" />
     <MESSAGE value="Рефакторинг: создание вспомогательных методов" />
     <MESSAGE value=" Добавлены новые тесты NewContact" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Добавлены новые тесты NewContact" />
+    <MESSAGE value="Обновление фикстуры" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление фикстуры" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
