@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Обновлены методы">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Рефакторинг параметров">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/ContactData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/NewContact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651789767824</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Рефакторинг параметров">
+      <created>1651790243787</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651790243787</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,7 +329,8 @@
     <MESSAGE value=" Добавлены новые тесты NewContact" />
     <MESSAGE value="Обновление фикстуры" />
     <MESSAGE value="Обновлены методы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновлены методы" />
+    <MESSAGE value="Рефакторинг параметров" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг параметров" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
