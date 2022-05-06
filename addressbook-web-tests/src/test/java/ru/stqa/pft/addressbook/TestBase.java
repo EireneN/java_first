@@ -32,7 +32,7 @@ public class TestBase {
         wd.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
-    protected void ReturnToGroupPage() {
+    protected void returnToGroupPage() {
         wd.findElement(By.linkText("groups")).click();
     }
 
@@ -70,5 +70,13 @@ public class TestBase {
 
     private void logout() {
         wd.findElement(By.linkText("Logout")).click();
+    }
+
+    protected void deleteSelectedGroups() {
+      wd.findElement(By.name("delete")).click();
+    }
+
+    protected void selectGroup() {
+      wd.findElement(By.name("selected[]")).click();
     }
 }
