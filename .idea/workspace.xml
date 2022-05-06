@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Добавлен тест на удаление группы и создан класс TestBase">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Рефакторинг GroupDelitionTests">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupDelitionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupDelitionTests.java" afterDir="false" />
@@ -117,7 +118,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupDelitionTests">
+  <component name="RunManager" selected="TestNG.NewContact">
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -214,10 +215,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GroupDelitionTests" />
-        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
-        <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.NewContact" />
+        <item itemvalue="TestNG.GroupDelitionTests" />
+        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.PointTest.testDistance" />
       </list>
     </recent_temporary>
@@ -322,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651861350193</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Рефакторинг GroupDelitionTests">
+      <created>1651862219523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651862219523</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,7 +359,8 @@
     <MESSAGE value="Рефакторинг параметров" />
     <MESSAGE value="Создан вспомогательный класс ContactData" />
     <MESSAGE value="Добавлен тест на удаление группы и создан класс TestBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен тест на удаление группы и создан класс TestBase" />
+    <MESSAGE value="Рефакторинг GroupDelitionTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг GroupDelitionTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
