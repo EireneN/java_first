@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     WebDriver wd;
 
-    private  SessionHelper sessionHelper;
+    private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
 
@@ -24,12 +24,8 @@ public class ApplicationManager {
     }
 
     public void stop() {
-        logout();
+        sessionHelper.logout();
         wd.quit();
-    }
-
-    public void logout() {
-        wd.findElement(By.linkText("Logout")).click();
     }
 
     public GroupHelper getGroupHelper() {
