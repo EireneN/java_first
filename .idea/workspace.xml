@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Создание специализированных классов-помощников: Session/Navigator/Group helper">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Редактирую Group helper">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HelperBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +120,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupDelitionTests (1)">
+  <component name="RunManager" selected="TestNG.NewContactTests (1)">
     <configuration name="GroupCreationTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -211,9 +215,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NewContactTests (1)" />
         <item itemvalue="TestNG.GroupDelitionTests (1)" />
         <item itemvalue="TestNG.GroupCreationTests (1)" />
-        <item itemvalue="TestNG.NewContactTests (1)" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.NewContactTests" />
       </list>
@@ -347,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651871546929</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Редактирую Group helper">
+      <created>1651875065527</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651875065527</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,7 +391,8 @@
     <MESSAGE value="Создание ApplicationManager" />
     <MESSAGE value="Создание новых пакетов" />
     <MESSAGE value="Создание специализированных классов-помощников: Session/Navigator/Group helper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание специализированных классов-помощников: Session/Navigator/Group helper" />
+    <MESSAGE value="Редактирую Group helper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Редактирую Group helper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
