@@ -23,8 +23,28 @@ public class ContactHelper extends HelperBase{
     public void SendForm() {
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
+
     public void selectContact() {
-        click(By.id("7"));
+        click(By.id("11"));
     }
+
+    public void closeAlert() {
+        wd.switchTo().alert().accept();
+    }
+
+    public void deleteContact(){
+        click (By.xpath("//input[@value='Delete']"));
+    }
+
+    public void openContactEditMode (){
+       click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void submitContactModification (){
+        click(By.xpath("//div[@id='content']/form/input[22]"));
+    }
+
 }
+
+
 
