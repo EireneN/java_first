@@ -1,12 +1,10 @@
-package com.example.tests;
+package ru.stqa.pft.addressbook;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class UntitledTestCase {
   private WebDriver driver;
@@ -31,7 +29,7 @@ public class UntitledTestCase {
     driver.findElement(By.name("pass")).clear();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("//input[@value='Login']")).click();
-    driver.findElement(By.id("8")).click();
+    driver.findElement(By.id("9")).click();
     acceptNextAlert = true;
     driver.findElement(By.xpath("//input[@value='Delete']")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
