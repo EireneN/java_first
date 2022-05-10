@@ -25,7 +25,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public void selectContact() {
-        click(By.id("11"));
+        click(By.id("13"));
     }
 
     public void closeAlert() {
