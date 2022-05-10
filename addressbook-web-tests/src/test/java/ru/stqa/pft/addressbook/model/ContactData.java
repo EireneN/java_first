@@ -11,7 +11,8 @@ public class ContactData {
         this.contactSurname = contactSurname;
         this.contactMobNumber = contactMobNumber;
         this.contactEmail = contactEmail;
-    }
+        }
+
 
     public String getContactName() {
         return contactName;
