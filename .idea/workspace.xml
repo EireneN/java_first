@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Добавлены условия заполнения формы контакта (модификация и создание) - поле выбор группы">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Установлен таймаут ноль">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +121,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactModificationTests">
+  <component name="RunManager" selected="TestNG.NewContactTests">
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -237,10 +238,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactModificationTests" />
-        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.NewContactTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.ContactModificationTests" />
+        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.ContactDeletionTests" />
       </list>
     </recent_temporary>
@@ -464,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652294741983</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Установлен таймаут ноль">
+      <created>1652295040745</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652295040745</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring code" />
     <MESSAGE value="Перенос части кода в фикстуры" />
     <MESSAGE value="Рефакторинг: создание вспомогательных методов" />
     <MESSAGE value=" Добавлены новые тесты NewContact" />
@@ -505,7 +512,8 @@
     <MESSAGE value="Исправила выбор контакта для удаления (убрала комментарий)" />
     <MESSAGE value="Оптимизация заполнения формы (группы)" />
     <MESSAGE value="Добавлены условия заполнения формы контакта (модификация и создание) - поле выбор группы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены условия заполнения формы контакта (модификация и создание) - поле выбор группы" />
+    <MESSAGE value="Установлен таймаут ноль" />
+    <option name="LAST_COMMIT_MESSAGE" value="Установлен таймаут ноль" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
