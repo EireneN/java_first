@@ -28,7 +28,7 @@ public class ContactHelper extends HelperBase{
         }
     }
 
-    public void SendForm() {
+    public void sendForm() {
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
@@ -52,6 +52,15 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//div[@id='content']/form/input[22]"));
     }
 
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public void createContact(ContactData contact, boolean t) {
+        initContactCreation();
+        fillContactForm(contact,t);
+        sendForm();
+    }
 }
 
 

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Оптимизированы переходы между страницами">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Реализовано и обеспечено выполнение предусловий удаления и модификации группы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactDeletionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupModificationTests">
+  <component name="RunManager" selected="TestNG.ContactDeletionTests">
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -144,6 +145,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ContactDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactDeletionTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -154,40 +172,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactModificationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupDeletionTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -229,21 +213,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewContactTests.testNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.NewContactTests" />
+      <option name="METHOD_NAME" value="testNewContact" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
-      <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.ContactModificationTests" />
       <item itemvalue="TestNG.NewContactTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
-      <item itemvalue="TestNG.GroupDeletionTests" />
+      <item itemvalue="TestNG.NewContactTests.testNewContact" />
+      <item itemvalue="TestNG.ContactDeletionTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactDeletionTests" />
+        <item itemvalue="TestNG.NewContactTests" />
+        <item itemvalue="TestNG.NewContactTests.testNewContact" />
         <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.ContactModificationTests" />
-        <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.NewContactTests" />
-        <item itemvalue="TestNG.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -480,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652295959550</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Реализовано и обеспечено выполнение предусловий удаления и модификации группы">
+      <created>1652297139778</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1652297139778</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -496,7 +505,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Рефакторинг: создание вспомогательных методов" />
     <MESSAGE value=" Добавлены новые тесты NewContact" />
     <MESSAGE value="Обновление фикстуры" />
     <MESSAGE value="Обновлены методы" />
@@ -521,7 +529,8 @@
     <MESSAGE value="Добавлены условия заполнения формы контакта (модификация и создание) - поле выбор группы" />
     <MESSAGE value="Установлен таймаут ноль" />
     <MESSAGE value="Оптимизированы переходы между страницами" />
-    <option name="LAST_COMMIT_MESSAGE" value="Оптимизированы переходы между страницами" />
+    <MESSAGE value="Реализовано и обеспечено выполнение предусловий удаления и модификации группы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано и обеспечено выполнение предусловий удаления и модификации группы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,11 +565,39 @@
           <line>18</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GradleRunConfiguration">
         <watch expression="point" language="JAVA" />
+      </configuration>
+      <configuration name="TestNG">
+        <watch expression="contactData.getGroup()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
