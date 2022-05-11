@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Лекция 3.2">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/irina/jft/sandbox/Equality.java" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Запуск теcтов из 2х браузеров FF и Chrome">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/UntitledTestCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Equality">
+  <component name="RunManager" selected="TestNG.ContactDeletionTests">
     <configuration name="Equality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.Equality" />
       <module name="sandbox.main" />
@@ -138,29 +134,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="EquationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;irina.jft.sandbox.EquationTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
@@ -183,16 +156,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EquationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="sandbox.test" />
+    <configuration name="ContactDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="irina.jft.sandbox.*" />
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="irina.jft.sandbox" />
-      <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.EquationTests" />
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactDeletionTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactModificationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -217,7 +207,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests.testGroupCreation" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NewContactTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -226,9 +216,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
-      <option name="METHOD_NAME" value="testGroupCreation" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.NewContactTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -236,20 +225,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.addressbook-web-tests [run]" />
-      <item itemvalue="Gradle.EquationTests" />
-      <item itemvalue="TestNG.EquationTests" />
-      <item itemvalue="TestNG.GroupCreationTests" />
-      <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       <item itemvalue="Application.Equality" />
+      <item itemvalue="Gradle.addressbook-web-tests [run]" />
+      <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.ContactModificationTests" />
+      <item itemvalue="TestNG.NewContactTests" />
+      <item itemvalue="TestNG.ContactDeletionTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Equality" />
-        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
+        <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.EquationTests" />
-        <item itemvalue="Gradle.EquationTests" />
+        <item itemvalue="TestNG.NewContactTests" />
+        <item itemvalue="TestNG.ContactModificationTests" />
+        <item itemvalue="Application.Equality" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652196766448</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Запуск теcтов из 2х браузеров FF и Chrome">
+      <created>1652201227962</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1652201227962</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +473,8 @@
     <MESSAGE value="Создан TestModofication" />
     <MESSAGE value="Созданы ContactDeletionTests, ContactModificationTests" />
     <MESSAGE value="Лекция 3.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Лекция 3.2" />
+    <MESSAGE value="Запуск теcтов из 2х браузеров FF и Chrome" />
+    <option name="LAST_COMMIT_MESSAGE" value="Запуск теcтов из 2х браузеров FF и Chrome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -513,19 +510,9 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
           <line>9</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
