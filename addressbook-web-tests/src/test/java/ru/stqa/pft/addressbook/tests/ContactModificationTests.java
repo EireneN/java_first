@@ -10,11 +10,13 @@ public class ContactModificationTests extends TestBase {
     public void testContactModification() throws Exception {
         app.getNavigationHelper().goHomePage();
         if(! app.getContactHelper().isThereAContact()){
-            app.getContactHelper().createContact(new ContactData("Artem", "Nosov", "+79523932745", "artemn@yandex.ru", "test1"), true);
+            app.getContactHelper().createContact(new ContactData("Artem", "Nosov",
+                    "+79523932745", "artemn@yandex.ru", "test1"));
         }
         app.getNavigationHelper().goHomePage();
         app.getContactHelper().openContactEditMode();
-        app.getContactHelper().fillContactForm(new ContactData("Irina", "Nosova", "+79214789090", "irinan@yandex.ru", null), false);
+        app.getContactHelper().fillContactForm(new ContactData("Irina", "Nosova",
+                "+79214789090", "irinan@yandex.ru", null), false);
         app.getContactHelper().submitContactModification();
     }
 }
