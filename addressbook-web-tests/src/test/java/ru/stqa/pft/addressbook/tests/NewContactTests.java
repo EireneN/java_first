@@ -18,7 +18,7 @@ public class NewContactTests extends TestBase{
         }
 
         app.getContactHelper().createContact( new ContactData("Artem", "Nosov",
-                "+79523932745", "artemn@yandex.ru", "test"));
+                "+79523932745", "artemn@yandex.ru"));
 
 
 

@@ -11,12 +11,12 @@ public class ContactModificationTests extends TestBase {
         app.getNavigationHelper().goHomePage();
         if(! app.getContactHelper().isThereAContact()){
             app.getContactHelper().createContact(new ContactData("Artem", "Nosov",
-                    "+79523932745", "artemn@yandex.ru", "test1"));
+                    "+79523932745", "artemn@yandex.ru"));
         }
         app.getNavigationHelper().goHomePage();
         app.getContactHelper().openContactEditMode();
         app.getContactHelper().fillContactForm(new ContactData("Irina", "Nosova",
-                "+79214789090", "irinan@yandex.ru", null), false);
+                "+79214789090", "irinan@yandex.ru"), false);
         app.getContactHelper().submitContactModification();
     }
 }
