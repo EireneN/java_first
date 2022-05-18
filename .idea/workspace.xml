@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Добавлена проверка наличия группы/выбора при создании нового контакта + урок 4.1">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Удалено поле &quot;группа&quot; из ContactData и из тестов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/irina/jft/sandbox/Primes.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/irina/jft/sandbox/Primes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/test/java/irina/jft/sandbox/PrimeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/test/java/irina/jft/sandbox/PrimeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactDeletionTests">
+  <component name="RunManager" selected="TestNG.PrimeTests.testsPrime">
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -206,16 +207,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
+    <configuration name="PrimeTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="PATTERN" value="irina.jft.sandbox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupModificationTests" />
+      <option name="PACKAGE_NAME" value="irina.jft.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.PrimeTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -223,17 +224,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewContactTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
+    <configuration name="PrimeTests.testsPrime" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="PATTERN" value="irina.jft.sandbox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.NewContactTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="irina.jft.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="irina.jft.sandbox.PrimeTests" />
+      <option name="METHOD_NAME" value="testsPrime" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -242,19 +244,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
-      <item itemvalue="TestNG.GroupModificationTests" />
-      <item itemvalue="TestNG.NewContactTests" />
       <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
       <item itemvalue="TestNG.ContactModificationTests" />
       <item itemvalue="TestNG.ContactDeletionTests" />
+      <item itemvalue="TestNG.PrimeTests" />
+      <item itemvalue="TestNG.PrimeTests.testsPrime" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PrimeTests.testsPrime" />
+        <item itemvalue="TestNG.PrimeTests" />
         <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.ContactModificationTests" />
         <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
-        <item itemvalue="TestNG.NewContactTests" />
-        <item itemvalue="TestNG.GroupModificationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -519,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652823968271</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Удалено поле &quot;группа&quot; из ContactData и из тестов">
+      <created>1652894051142</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1652894051142</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Рефакторинг параметров" />
     <MESSAGE value="Создан вспомогательный класс ContactData" />
     <MESSAGE value="Добавлен тест на удаление группы и создан класс TestBase" />
     <MESSAGE value="Рефакторинг GroupDelitionTests" />
@@ -560,7 +568,8 @@
     <MESSAGE value="Реализовано выполнение предусловий удаления контакта (его создание)" />
     <MESSAGE value="Реализовано выполнение предусловий модификации контакта (его создание)" />
     <MESSAGE value="Добавлена проверка наличия группы/выбора при создании нового контакта + урок 4.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена проверка наличия группы/выбора при создании нового контакта + урок 4.1" />
+    <MESSAGE value="Удалено поле &quot;группа&quot; из ContactData и из тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удалено поле &quot;группа&quot; из ContactData и из тестов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
