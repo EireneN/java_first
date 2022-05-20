@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Сравниваем множество в тесте модификации группы (урок 4.7)">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Лекция 4.8. Поиск максимального элемента в коллекции">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -577,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653072726027</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Лекция 4.8. Поиск максимального элемента в коллекции">
+      <created>1653074589792</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1653074589792</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -593,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Редактирую Session/Navigator helper" />
     <MESSAGE value="перенос logout" />
     <MESSAGE value="Трансформация NewContactTests (двухуровневая архитектура)" />
     <MESSAGE value="Создан TestModofication" />
@@ -618,7 +623,8 @@
     <MESSAGE value="Добавлено возвращение на Домашнюю страницу в тесте на удаление контакта" />
     <MESSAGE value="Добавлено сравнение списков групп (урок 4.6)" />
     <MESSAGE value="Сравниваем множество в тесте модификации группы (урок 4.7)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сравниваем множество в тесте модификации группы (урок 4.7)" />
+    <MESSAGE value="Лекция 4.8. Поиск максимального элемента в коллекции" />
+    <option name="LAST_COMMIT_MESSAGE" value="Лекция 4.8. Поиск максимального элемента в коллекции" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
