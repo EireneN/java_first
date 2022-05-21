@@ -53,8 +53,8 @@ public class ContactHelper extends HelperBase {
             click(By.xpath("//input[@value='Delete']"));
         }
 
-        public void openContactEditMode () {
-            click(By.xpath("//img[@alt='Edit']"));
+        public void openContactEditMode (int i) {
+            wd.findElements(By.xpath("//img[@alt='Edit']")).get(i).click();
         }
 
         public void submitContactModification () {
