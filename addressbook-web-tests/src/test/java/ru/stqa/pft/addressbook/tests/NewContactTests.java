@@ -1,12 +1,11 @@
 package ru.stqa.pft.addressbook.tests;
 
 
-import org.openqa.selenium.By;
-import org.testng.annotations.*;
-import ru.stqa.pft.addressbook.appmanager.ApplicationManager;
-import ru.stqa.pft.addressbook.appmanager.ContactHelper;
+import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
+
+import java.util.ArrayList;
 
 public class NewContactTests extends TestBase{
 
@@ -20,9 +19,15 @@ public class NewContactTests extends TestBase{
         app.getContactHelper().createContact( new ContactData("Artem", "Nosov",
                 "+79523932745", "artemn@yandex.ru"));
 
+    }
 
-
-
+    @Test
+    public void testNewContact3() throws Exception {
+        int x = 8;
+        for (int i = 0; i < x; i++) {
+            System.out.println(i);
+            testNewContact();
+        }
     }
 }
 
