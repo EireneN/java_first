@@ -13,7 +13,7 @@ import java.util.List;
 
 public class NewContactTests extends TestBase{
 
-    @Test
+    @Test(enabled = false)
     public void testNewContact() throws Exception {
         app.getNavigationHelper().goToGroupPage();
         if(! app.getGroupHelper().isThereAGroup()) {
@@ -74,7 +74,7 @@ public class NewContactTests extends TestBase{
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void testNewContact3() throws Exception {
         int x = 8;
         for (int i = 0; i < x; i++) {

@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ContactDeletionTests extends TestBase{
 
-    @Test
+    @Test(enabled = false)
     public void testContactDeletion() throws Exception {
         app.getNavigationHelper().goHomePage();
         if (! app.getContactHelper().isThereAContact()) {
