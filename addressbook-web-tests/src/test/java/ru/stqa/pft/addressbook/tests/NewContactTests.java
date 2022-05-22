@@ -1,13 +1,11 @@
 package ru.stqa.pft.addressbook.tests;
 
 
-import org.openqa.selenium.json.JsonOutput;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -15,18 +13,18 @@ public class NewContactTests extends TestBase{
 
     @Test(enabled = false)
     public void testNewContact() throws Exception {
-        app.getNavigationHelper().goToGroupPage();
-        if(! app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test", null, null));
+        app.goTo().groupPage();
+        if(! app.group().isThereAGroup()) {
+            app.group().create(new GroupData("test", null, null));
         }
-        app.getNavigationHelper().goHomePage();
+        app.goTo().homePage();
         List<ContactData> before = app.getContactHelper().getContactList();
 
         ContactData contact = new ContactData("Artemka", "Nosov",
                 "+79523932745", "artemn@yandex.ru");
 
         app.getContactHelper().createContact(contact);
-        app.getNavigationHelper().goHomePage();
+        app.goTo().homePage();
 
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(), before.size() +1);
