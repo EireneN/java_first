@@ -15,7 +15,7 @@ public class NewContactTests extends TestBase{
     public void testNewContact() throws Exception {
         app.goTo().groupPage();
         if(! app.group().isThereAGroup()) {
-            app.group().create(new GroupData("test", null, null));
+            app.group().create(new GroupData().withName ("test"));
         }
         app.goTo().homePage();
         List<ContactData> before = app.getContactHelper().getContactList();
