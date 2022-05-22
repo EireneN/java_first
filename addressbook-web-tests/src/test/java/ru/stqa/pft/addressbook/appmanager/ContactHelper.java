@@ -72,14 +72,15 @@ public class ContactHelper extends HelperBase {
         }
 
     public List<ContactData> getContactList() {
-        System.out.println("Get contact list");
+
+        System.out.println("Вызван метод getContactList()");
+
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
 
         for (WebElement e : elements) {
             int id = Integer.parseInt(e.findElement(By.tagName("input")).getAttribute("id"));
             String contactInfo = e.getText();
-            System.out.println(contactInfo);
             String[] cd = contactInfo.split(" ");
             String surname = cd[0];
             String name = cd[1];
@@ -88,6 +89,7 @@ public class ContactHelper extends HelperBase {
 
             ContactData contact = new ContactData(id, name, surname, number, email);
             contacts.add(contact);
+
             System.out.println(contact.toString());
         }
         return contacts;

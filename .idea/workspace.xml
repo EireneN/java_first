@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Сравнение списков в ContactDeletionTests">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Сравнение списков в ContactModificationTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/NewContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,23 +156,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactDeletionTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ContactDeletionTests.testContactDeletion" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -225,6 +209,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewContactTests.testNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.NewContactTests" />
+      <option name="METHOD_NAME" value="testNewContact" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NewContactTests.testNewContact3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -245,19 +247,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
-      <item itemvalue="TestNG.ContactDeletionTests" />
       <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
-      <item itemvalue="TestNG.NewContactTests" />
       <item itemvalue="TestNG.NewContactTests.testNewContact3" />
       <item itemvalue="TestNG.ContactModificationTests.testContactModification" />
+      <item itemvalue="TestNG.NewContactTests.testNewContact" />
+      <item itemvalue="TestNG.NewContactTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ContactModificationTests.testContactModification" />
+        <item itemvalue="TestNG.NewContactTests.testNewContact" />
+        <item itemvalue="TestNG.NewContactTests" />
         <item itemvalue="TestNG.NewContactTests.testNewContact3" />
         <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
-        <item itemvalue="TestNG.ContactDeletionTests" />
-        <item itemvalue="TestNG.NewContactTests" />
       </list>
     </recent_temporary>
   </component>
@@ -606,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653163728207</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Сравнение списков в ContactModificationTests">
+      <created>1653168536579</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1653168536579</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -622,7 +631,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Созданы ContactDeletionTests, ContactModificationTests" />
     <MESSAGE value="Лекция 3.2" />
     <MESSAGE value="Запуск теcтов из 2х браузеров FF и Chrome" />
     <MESSAGE value="Исправила выбор контакта для удаления" />
@@ -647,7 +655,8 @@
     <MESSAGE value="Лекция 4.9. Лямбда-выражение" />
     <MESSAGE value="Лекция 4.10. Сортировка списков" />
     <MESSAGE value="Сравнение списков в ContactDeletionTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сравнение списков в ContactDeletionTests" />
+    <MESSAGE value="Сравнение списков в ContactModificationTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сравнение списков в ContactModificationTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -698,6 +707,7 @@
         <watch expression="before.get(1)" language="JAVA" />
         <watch expression="before.get(0).equals(before.get(1))" language="JAVA" />
         <watch expression="wd.findElements(By.xpath(&quot;//img[@alt='Edit']&quot;))" language="JAVA" />
+        <watch expression="before.sort(byId)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
