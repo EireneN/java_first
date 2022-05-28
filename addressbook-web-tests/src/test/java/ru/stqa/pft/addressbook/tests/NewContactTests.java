@@ -11,7 +11,7 @@ import java.util.List;
 
 public class NewContactTests extends TestBase{
 
-    @Test(enabled = false)
+    @Test
     public void testNewContact() throws Exception {
         app.goTo().groupPage();
         if(! app.group().isThereAGroup()) {
@@ -20,7 +20,7 @@ public class NewContactTests extends TestBase{
         app.goTo().homePage();
         List<ContactData> before = app.getContactHelper().getContactList();
 
-        ContactData contact = new ContactData("Artemka", "Nosov",
+        ContactData contact = new ContactData("Artemka", "Nosov", "SPb",
                 "+79523932745", "artemn@yandex.ru");
 
         app.getContactHelper().createContact(contact);
@@ -72,7 +72,7 @@ public class NewContactTests extends TestBase{
 
     }
 
-    @Test(enabled = false)
+    @Test
     public void testNewContact3() throws Exception {
         int x = 8;
         for (int i = 0; i < x; i++) {

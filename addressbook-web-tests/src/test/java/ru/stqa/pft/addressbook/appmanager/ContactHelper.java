@@ -25,6 +25,7 @@ public class ContactHelper extends HelperBase {
 
         type(By.name("firstname"), contactData.getContactName());
         type(By.name("lastname"), contactData.getContactSurname());
+        type(By.name("address"), contactData.getContactAddress());
         type(By.name("mobile"), contactData.getContactMobNumber());
         type(By.name("email"), contactData.getContactEmail());
 
@@ -78,16 +79,18 @@ public class ContactHelper extends HelperBase {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
 
+
         for (WebElement e : elements) {
             int id = Integer.parseInt(e.findElement(By.tagName("input")).getAttribute("id"));
-            String contactInfo = e.getText();
-            String[] cd = contactInfo.split(" ");
-            String surname = cd[0];
-            String name = cd[1];
-            String email = cd[2];
-            String number = cd[3];
 
-            ContactData contact = new ContactData(id, name, surname, number, email);
+            String surname = e.findElement(By.cssSelector("td:nth-of-type(2)")).getText();
+            String name = e.findElement(By.cssSelector("td:nth-of-type(3)")).getText();
+            String address = e.findElement(By.cssSelector("td:nth-of-type(4)")).getText();
+            String email = e.findElement(By.cssSelector("td:nth-of-type(5)")).getText();
+            String number = e.findElement(By.cssSelector("td:nth-of-type(6)")).getText();
+
+
+            ContactData contact = new ContactData(id, name, surname, address, number, email);
             contacts.add(contact);
 
             System.out.println(contact.toString());

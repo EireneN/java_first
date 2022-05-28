@@ -9,12 +9,12 @@ import java.util.List;
 
 public class ContactModificationTests extends TestBase {
 
-    @Test(enabled = false)
+    @Test
     public void testContactModification() throws Exception {
         app.goTo().homePage();
 
         if (!app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactData("Artem", "Nosov",
+            app.getContactHelper().createContact(new ContactData("Artem", "Nosov", "SPb",
                     "+79523932745", "artemn@yandex.ru"));
         }
         app.goTo().homePage();
@@ -22,7 +22,7 @@ public class ContactModificationTests extends TestBase {
         List<ContactData> before = app.getContactHelper().getContactList();
 
         app.getContactHelper().openContactEditMode(0);
-        ContactData contact = new ContactData(before.get(0).getId(), "Irinka", "Nosova",
+        ContactData contact = new ContactData(before.get(0).getId(), "Irinka", "Nosova", "Sochi",
                 "+79214789090", "irinan@yandex.ru");
         app.getContactHelper().fillContactForm(contact, false);
         app.getContactHelper().submitContactModification();
@@ -40,8 +40,8 @@ public class ContactModificationTests extends TestBase {
                 return Integer.compare(o1.getId(), o2.getId());
             }
         };
-        printSort(before, "befor sort");
-        printSort(after, "befor sort");
+        printSort(before, "before sort");
+        printSort(after, "before sort");
 
         before.sort(byId);
         after.sort(byId);

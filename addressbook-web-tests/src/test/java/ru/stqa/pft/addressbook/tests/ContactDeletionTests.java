@@ -8,11 +8,11 @@ import java.util.List;
 
 public class ContactDeletionTests extends TestBase{
 
-    @Test(enabled = false)
+    @Test
     public void testContactDeletion() throws Exception {
         app.goTo().homePage();
         if (! app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactData("Artem", "Nosov",
+            app.getContactHelper().createContact(new ContactData("Artem", "Nosov", "SPb",
                     "+79523932745", "artemn@yandex.ru"));
             app.goTo().homePage();
         }
