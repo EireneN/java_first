@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.List;
+import java.util.Set;
 
 public class ContactDeletionTests extends TestBase{
 
@@ -22,17 +23,16 @@ public class ContactDeletionTests extends TestBase{
     @Test
     public void testContactDeletion() throws Exception {
 
-        List<ContactData> before = app.contactHelper().contactList();
-        int index = before.size() - 1;
+        Set<ContactData> before = app.contactHelper().allContact();
+        ContactData deletedContact = before.iterator().next();
 
-        app.contactHelper().delete(index);
-
+        app.contactHelper().delete(deletedContact);
         app.goTo().homePage();
 
-        List<ContactData> after = app.contactHelper().contactList();
+        Set<ContactData> after = app.contactHelper().allContact();
         Assert.assertEquals(after.size(), before.size() - 1);
 
-        before.remove(index);
+        before.remove(deletedContact);
         Assert.assertEquals(before, after);
     }
 

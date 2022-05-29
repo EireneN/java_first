@@ -5,8 +5,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 public class ContactModificationTests extends TestBase {
 
@@ -24,8 +24,9 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModification() throws Exception {
 
-        List<ContactData> before = app.contactHelper().contactList();
-        int id = before.get(0).getId();
+        Set<ContactData> before = app.contactHelper().allContact();
+        ContactData modifiedContact = before.iterator().next();
+        int id = modifiedContact.getId();
         ContactData contact = new ContactData()
                 .setId(id)
                 .withContactName("Irinka")
@@ -39,20 +40,12 @@ public class ContactModificationTests extends TestBase {
         app.contactHelper().modifyContact(contact);
         app.goTo().homePage();
 
-        List<ContactData> after = app.contactHelper().contactList();
+        Set<ContactData> after = app.contactHelper().allContact();
         Assert.assertEquals(after.size(), before.size());
 
-        before.remove(0);
+        before.remove(modifiedContact);
         before.add(contact);
-        Comparator<? super ContactData> byId = new Comparator<ContactData>() {
-            @Override
-            public int compare(ContactData o1, ContactData o2) {
-                return Integer.compare(o1.getId(), o2.getId());
-            }
-        };
 
-        before.sort(byId);
-        after.sort(byId);
         Assert.assertEquals(before, after);
     }
 

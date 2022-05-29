@@ -8,8 +8,7 @@ import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ContactHelper extends HelperBase {
 
@@ -42,9 +41,10 @@ public class ContactHelper extends HelperBase {
             click(By.xpath("//div[@id='content']/form/input[21]"));
         }
 
-        public void selectContact (int index) {
-            wd.findElements(By.name("selected[]")).get(index).click();
-        }
+        public void selectContactById (int id) {
+
+        wd.findElement(By.cssSelector("input[value= '"+ id +"' ]")).click();
+    }
 
         public void closeAlert () {
             wd.switchTo().alert().accept();
@@ -54,8 +54,18 @@ public class ContactHelper extends HelperBase {
             click(By.xpath("//input[@value='Delete']"));
         }
 
-        public void openContactEditMode (int i) {
-            wd.findElements(By.xpath("//img[@alt='Edit']")).get(i).click();
+        public void openContactEditMode (int id) {
+            List<WebElement> elements = wd.findElements(By.name("entry"));
+            WebElement element = null;
+
+            for (WebElement e : elements) {
+                int id2 = Integer.parseInt(e.findElement(By.tagName("input")).getAttribute("id"));
+                if (Objects.equals(id, id2)) {
+                    element = e;
+                }
+            }
+            element.findElement(By.cssSelector("td:nth-of-type(8)")).click();
+
         }
 
         public void submitContactModification () {
@@ -72,11 +82,11 @@ public class ContactHelper extends HelperBase {
             sendForm();
         }
 
-    public List<ContactData> contactList() {
+    public Set<ContactData> allContact() {
 
-        System.out.println("Вызван метод contactList()");
+        System.out.println("Вызван метод allContact()");
 
-        List<ContactData> contacts = new ArrayList<ContactData>();
+        Set<ContactData> contacts = new HashSet<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
 
 
@@ -98,19 +108,21 @@ public class ContactHelper extends HelperBase {
         }
         return contacts;
     }
+
+
     public void modifyContact(ContactData contact) {
-        openContactEditMode(0);
+        openContactEditMode (contact.getId());
         fillContactForm(contact, false);
         submitContactModification();
     }
 
-    public void delete(int index) {
-        selectContact(index);
+    public void delete(ContactData deletedContact) {
+        selectContactById(deletedContact.getId());
         deleteContact();
         closeAlert();
     }
 
-    }
+}
 
 
 

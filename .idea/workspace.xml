@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Add @BeforeMethod in Contacts">
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Delete Constructor in Contacts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" afterDir="false" />
@@ -142,7 +141,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactModificationTests.testContactModification">
+  <component name="RunManager" selected="TestNG.ContactDeletionTests">
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -175,24 +174,6 @@
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactCreationTests.testNewContact" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactCreationTests" />
-      <option name="METHOD_NAME" value="testNewContact" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -234,6 +215,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ContactModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactModificationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactModificationTests.testContactModification" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -256,16 +254,16 @@
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
       <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
       <item itemvalue="TestNG.ContactModificationTests.testContactModification" />
-      <item itemvalue="TestNG.ContactCreationTests.testNewContact" />
       <item itemvalue="TestNG.ContactCreationTests" />
+      <item itemvalue="TestNG.ContactModificationTests" />
       <item itemvalue="TestNG.ContactDeletionTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactModificationTests.testContactModification" />
         <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.ContactCreationTests" />
-        <item itemvalue="TestNG.ContactCreationTests.testNewContact" />
+        <item itemvalue="TestNG.ContactModificationTests.testContactModification" />
+        <item itemvalue="TestNG.ContactModificationTests" />
         <item itemvalue="TestNG.ContactDeletionTests.testContactDeletion" />
       </list>
     </recent_temporary>
@@ -278,13 +276,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651492280460</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Обновлены методы">
-      <created>1651789767824</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1651789767824</updated>
     </task>
     <task id="LOCAL-00011" summary="Рефакторинг параметров">
       <created>1651790243787</created>
@@ -622,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653813554315</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Delete Constructor in Contacts">
+      <created>1653820352610</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1653820352610</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -644,7 +642,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Реализовано выполнение предусловий удаления контакта (его создание)" />
     <MESSAGE value="Реализовано выполнение предусловий модификации контакта (его создание)" />
     <MESSAGE value="Добавлена проверка наличия группы/выбора при создании нового контакта + урок 4.1" />
     <MESSAGE value="Удалено поле &quot;группа&quot; из ContactData и из тестов" />
@@ -669,7 +666,8 @@
     <MESSAGE value="Лекция 5.6. Hamcrest у групп" />
     <MESSAGE value="Исправление метода getContactList и добавление адреса" />
     <MESSAGE value="Add @BeforeMethod in Contacts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add @BeforeMethod in Contacts" />
+    <MESSAGE value="Delete Constructor in Contacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Constructor in Contacts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -709,6 +707,16 @@
           <line>14</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -716,17 +724,7 @@
         <watch expression="point" language="JAVA" />
       </configuration>
       <configuration name="TestNG">
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='center']&quot;))" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='center']&quot;))" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;td&quot;))" language="JAVA" />
-        <watch expression="e.findElement(By.name(&quot;entry&quot;))" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(2)&quot;)).getText()" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(3)&quot;)).getText()" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(4)&quot;)).getText()" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(5)&quot;)).getText()" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(6)&quot;)).getText()" language="JAVA" />
-        <watch expression="wd.findElement(By.cssSelector(&quot;tr[name='entry'] td:nth-of-type(1)&quot;)).getText()" language="JAVA" />
-        <watch expression="e.findElement(By.cssSelector(&quot;td:nth-of-type(3)&quot;)).getText()" language="JAVA" />
+        <watch expression="e.getText()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
