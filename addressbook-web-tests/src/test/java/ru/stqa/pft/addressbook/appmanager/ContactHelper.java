@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.Contacts;
 
 
 import java.util.*;
@@ -82,11 +83,11 @@ public class ContactHelper extends HelperBase {
             sendForm();
         }
 
-    public Set<ContactData> allContact() {
+    public Contacts allContact() {
 
         System.out.println("Вызван метод allContact()");
 
-        Set<ContactData> contacts = new HashSet<ContactData>();
+        Contacts contacts = new Contacts();
         List<WebElement> elements = wd.findElements(By.name("entry"));
 
 
