@@ -72,9 +72,9 @@ public class ContactHelper extends HelperBase {
             sendForm();
         }
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> contactList() {
 
-        System.out.println("Вызван метод getContactList()");
+        System.out.println("Вызван метод contactList()");
 
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
@@ -90,12 +90,24 @@ public class ContactHelper extends HelperBase {
             String number = e.findElement(By.cssSelector("td:nth-of-type(6)")).getText();
 
 
-            ContactData contact = new ContactData(id, name, surname, address, number, email);
+            ContactData contact = new ContactData().setId(id).withContactName(name).withContactSurname(surname).
+                    withContactAddress(address).withContactMobNumber(number).withContactEmail(email);
             contacts.add(contact);
 
             System.out.println(contact.toString());
         }
         return contacts;
+    }
+    public void modifyContact(ContactData contact) {
+        openContactEditMode(0);
+        fillContactForm(contact, false);
+        submitContactModification();
+    }
+
+    public void delete(int index) {
+        selectContact(index);
+        deleteContact();
+        closeAlert();
     }
 
     }

@@ -14,9 +14,9 @@ public class ContactModificationTests extends TestBase {
     public static void ensurePreconditions() {
         app.goTo().homePage();
 
-        if (!app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactData("Artem", "Nosov", "SPb",
-                    "+79523932745", "artemn@yandex.ru"));
+        if (!app.contactHelper().isThereAContact()) {
+            app.contactHelper().createContact(new ContactData().withContactName("Artemka").withContactSurname("Nosov").
+                    withContactAddress("SPb").withContactMobNumber("+79523932745").withContactEmail("artemn@yandex.ru"));
         }
         app.goTo().homePage();
     }
@@ -24,17 +24,22 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModification() throws Exception {
 
-        List<ContactData> before = app.getContactHelper().getContactList();
+        List<ContactData> before = app.contactHelper().contactList();
+        int id = before.get(0).getId();
+        ContactData contact = new ContactData()
+                .setId(id)
+                .withContactName("Irinka")
+                .withContactSurname("Nosova")
+                .withContactAddress("Sochi")
+                .withContactMobNumber("+79214789090")
+                .withContactEmail("irinan@yandex.ru");
 
-        app.getContactHelper().openContactEditMode(0);
-        ContactData contact = new ContactData(before.get(0).getId(), "Irinka", "Nosova", "Sochi",
-                "+79214789090", "irinan@yandex.ru");
-        app.getContactHelper().fillContactForm(contact, false);
-        app.getContactHelper().submitContactModification();
 
+
+        app.contactHelper().modifyContact(contact);
         app.goTo().homePage();
 
-        List<ContactData> after = app.getContactHelper().getContactList();
+        List<ContactData> after = app.contactHelper().contactList();
         Assert.assertEquals(after.size(), before.size());
 
         before.remove(0);
@@ -50,6 +55,8 @@ public class ContactModificationTests extends TestBase {
         after.sort(byId);
         Assert.assertEquals(before, after);
     }
+
+
 
     private void printSort(List<ContactData> list, String msg) {
         for (ContactData contactData:list) {

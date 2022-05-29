@@ -24,15 +24,15 @@ public class ContactCreationTests extends TestBase{
     @Test
     public void testNewContact() throws Exception {
 
-        List<ContactData> before = app.getContactHelper().getContactList();
+        List<ContactData> before = app.contactHelper().contactList();
 
-        ContactData contact = new ContactData("Artemka", "Nosov", "SPb",
-                "+79523932745", "artemn@yandex.ru");
+        ContactData contact = new ContactData().withContactName("Artemka").withContactSurname("Nosov").
+                withContactAddress("SPb").withContactMobNumber("+79523932745").withContactEmail("artemn@yandex.ru");
 
-        app.getContactHelper().createContact(contact);
+        app.contactHelper().createContact(contact);
         app.goTo().homePage();
 
-        List<ContactData> after = app.getContactHelper().getContactList();
+        List<ContactData> after = app.contactHelper().contactList();
         Assert.assertEquals(after.size(), before.size() +1);
 
         int max = 0;
@@ -41,27 +41,18 @@ public class ContactCreationTests extends TestBase{
                      max = c.getId();
                 }
          }
-
         contact.setId(max);
+        Comparator<? super ContactData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());
+
         before.add(contact);
-        Comparator<? super ContactData> byId = new Comparator<ContactData>() {
-            @Override
-            public int compare(ContactData o1, ContactData o2) {
-                return Integer.compare(o1.getId(), o2.getId());
-            }
-        };
 
         before.sort(byId);
         after.sort(byId);
         Assert.assertEquals(before, after);
 
     }
-    private void printSort(List<ContactData> list, String msg) {
-        System.out.println(msg + "--->");
-        for (ContactData contactData:list) {
-        }
 
-    }
+
 
     @Test (enabled = false)
     public void testNewContact3() throws Exception {

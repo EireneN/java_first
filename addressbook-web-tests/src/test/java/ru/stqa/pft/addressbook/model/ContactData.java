@@ -3,37 +3,49 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-    private int id;
-    private final String contactName;
-    private final String contactSurname;
-    private final String contactAddress;
-    private final String contactMobNumber;
-    private final String contactEmail;
+    private int id = Integer.MAX_VALUE;
+    private  String contactName;
+    private  String contactSurname;
+    private  String contactAddress;
+    private  String contactMobNumber;
+    private  String contactEmail;
 
-    public ContactData(int id, String contactName, String contactSurname, String contactAddress, String contactMobNumber, String contactEmail) {
+    public ContactData setId(int id) {
         this.id = id;
-        this.contactName = contactName;
-        this.contactSurname = contactSurname;
-        this.contactAddress = contactAddress;
-        this.contactMobNumber = contactMobNumber;
-        this.contactEmail = contactEmail;
-        }
-    public ContactData(String contactName, String contactSurname, String contactAddress, String contactMobNumber, String contactEmail) {
-        this.id = Integer.MAX_VALUE;
-        this.contactName = contactName;
-        this.contactSurname = contactSurname;
-        this.contactAddress = contactAddress;
-        this.contactMobNumber = contactMobNumber;
-        this.contactEmail = contactEmail;
+        return this;
     }
+
+    public ContactData withContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+
+    public ContactData withContactSurname(String contactSurname) {
+        this.contactSurname = contactSurname;
+        return this;
+    }
+
+    public ContactData withContactAddress(String contactAddress) {
+        this.contactAddress = contactAddress;
+        return this;
+    }
+
+    public ContactData withContactMobNumber(String contactMobNumber) {
+        this.contactMobNumber = contactMobNumber;
+        return this;
+    }
+
+    public ContactData withContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     @Override
     public boolean equals(Object o) {
