@@ -24,20 +24,20 @@ public class ContactCreationTests extends TestBase{
     @Test
     public void testNewContact() throws Exception {
 
-        Contacts before = app.contactHelper().allContact();
+        Contacts before = app.contact().allContacts();
 
-        ContactData contact = new ContactData().withContactName("Artemka").withContactSurname("Nosov").
-                withContactAddress("SPb").withContactMobNumber("+79523932745").withContactEmail("artemn@yandex.ru");
+        ContactData contact = new ContactData().withFirstname("Artemka").withLastname("Nosov").
+                withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru");
 
-        app.contactHelper().createContact(contact);
+        app.contact().createContact(contact);
         app.goTo().homePage();
 
-        Contacts after = app.contactHelper().allContact();
+        Contacts after = app.contact().allContacts();
         int b = before.size() +1;
         assertThat(after.size(), equalTo(b));
 
         assertThat(after, equalTo(
-                before.withAdded(contact.setId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+                before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
 
     }
 

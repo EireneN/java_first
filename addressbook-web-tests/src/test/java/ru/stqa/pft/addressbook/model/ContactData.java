@@ -4,45 +4,54 @@ import java.util.Objects;
 
 public class ContactData {
     private int id = Integer.MAX_VALUE;
-    private  String contactName;
-    private  String contactSurname;
-    private  String contactAddress;
-    private  String contactMobNumber;
-    private  String contactEmail;
+    private  String firstname;
+    private  String lastname;
+    private  String address;
+    private  String mobilePhone;
+    private  String email;
+    private String homePhone;
+    private String workPhone;
 
-    public ContactData setId(int id) {
+    // with - это setter
+
+    public ContactData withWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+        return this;
+    }
+
+    public ContactData withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+
+    public ContactData withId(int id) {
         this.id = id;
         return this;
     }
 
-    public ContactData withContactName(String contactName) {
-        this.contactName = contactName;
+    public ContactData withFirstname(String firstname) {
+        this.firstname = firstname;
         return this;
     }
 
-    public ContactData withContactSurname(String contactSurname) {
-        this.contactSurname = contactSurname;
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
         return this;
     }
 
-    public ContactData withContactAddress(String contactAddress) {
-        this.contactAddress = contactAddress;
+    public ContactData withAddress(String address) {
+        this.address = address;
         return this;
     }
 
-    public ContactData withContactMobNumber(String contactMobNumber) {
-        this.contactMobNumber = contactMobNumber;
+    public ContactData withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
         return this;
     }
 
-    public ContactData withContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
+    public ContactData withEmail(String email) {
+        this.email = email;
         return this;
-    }
-
-
-    public int getId() {
-        return id;
     }
 
 
@@ -51,45 +60,55 @@ public class ContactData {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(contactName, that.contactName) && Objects.equals(contactSurname, that.contactSurname);
+        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, contactName, contactSurname);
+        return Objects.hash(id, firstname, lastname);
     }
 
     @Override
     public String toString() {
         return "ContactData{" +
                 "ID = '" + id + "', " +
-                "NAME = '" + contactName + "', " +
-                "SURNAME = '" + contactSurname + "', " +
-                "ADDRESS = '" + contactAddress + "', " +
-                "NUMBER = '" + contactMobNumber + "', " +
-                "EMAIL = '" + contactEmail + "\'" +
+                "NAME = '" + firstname + "', " +
+                "SURNAME = '" + lastname + "', " +
+                "ADDRESS = '" + address + "', " +
+                "NUMBER = '" + mobilePhone + "', " +
+                "EMAIL = '" + email + "\'" +
                 '}';
     }
 
-
-    public String getContactName() {
-        return contactName;
+    public int getId() {
+        return id;
     }
 
-    public String getContactSurname() {
-        return contactSurname;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public String getContactAddress() {
-        return contactAddress;
+    public String getLastname() {
+        return lastname;
     }
 
-    public String getContactMobNumber() {
-        return contactMobNumber;
+    public String getAddress() {
+        return address;
     }
 
-    public String getContactEmail() {
-        return contactEmail;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getHomePhone() {
+        return homePhone;
+    }
+
+    public String getWorkPhone() {
+        return workPhone;
+    }
 }

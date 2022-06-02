@@ -15,9 +15,9 @@ public class ContactModificationTests extends TestBase {
     public static void ensurePreconditions() {
         app.goTo().homePage();
 
-        if (!app.contactHelper().isThereAContact()) {
-            app.contactHelper().createContact(new ContactData().withContactName("Artemka").withContactSurname("Nosov").
-                    withContactAddress("SPb").withContactMobNumber("+79523932745").withContactEmail("artemn@yandex.ru"));
+        if (!app.contact().isThereAContact()) {
+            app.contact().createContact(new ContactData().withFirstname("Artemka").withLastname("Nosov").
+                    withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru"));
         }
         app.goTo().homePage();
     }
@@ -25,23 +25,23 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModification() throws Exception {
 
-        Contacts before = app.contactHelper().allContact();
+        Contacts before = app.contact().allContacts();
         ContactData modifiedContact = before.iterator().next();
         int id = modifiedContact.getId();
         ContactData contact = new ContactData()
-                .setId(id)
-                .withContactName("Irinka")
-                .withContactSurname("Nosova")
-                .withContactAddress("Sochi")
-                .withContactMobNumber("+79214789090")
-                .withContactEmail("irinan@yandex.ru");
+                .withId(id)
+                .withFirstname("Irinka")
+                .withLastname("Nosova")
+                .withAddress("Sochi")
+                .withMobilePhone("+79214789090")
+                .withEmail("irinan@yandex.ru");
 
 
 
-        app.contactHelper().modifyContact(contact);
+        app.contact().modifyContact(contact);
         app.goTo().homePage();
 
-        Contacts after = app.contactHelper().allContact();
+        Contacts after = app.contact().allContacts();
         assertEquals(after.size(), before.size());
 
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
