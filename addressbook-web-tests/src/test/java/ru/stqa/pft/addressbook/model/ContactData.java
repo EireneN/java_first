@@ -11,6 +11,8 @@ public class ContactData {
     private  String email;
     private String homePhone;
     private String workPhone;
+    private String allPhones;
+
 
     // with - это setter
 
@@ -53,32 +55,11 @@ public class ContactData {
         this.email = email;
         return this;
     }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname);
-    }
-
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "ID = '" + id + "', " +
-                "NAME = '" + firstname + "', " +
-                "SURNAME = '" + lastname + "', " +
-                "ADDRESS = '" + address + "', " +
-                "NUMBER = '" + mobilePhone + "', " +
-                "EMAIL = '" + email + "\'" +
-                '}';
-    }
 
     public int getId() {
         return id;
@@ -110,5 +91,34 @@ public class ContactData {
 
     public String getWorkPhone() {
         return workPhone;
+    }
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstname, lastname);
+    }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "ID = '" + id + "', " +
+                "NAME = '" + firstname + "', " +
+                "SURNAME = '" + lastname + "', " +
+                "ADDRESS = '" + address + "', " +
+                "NUMBER = '" + mobilePhone + "', " +
+                "EMAIL = '" + email + "\'" +
+                '}';
     }
 }
