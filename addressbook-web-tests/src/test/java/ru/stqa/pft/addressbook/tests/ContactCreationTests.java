@@ -6,6 +6,8 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -49,6 +51,26 @@ public class ContactCreationTests extends TestBase{
         for (int i = 0; i < x; i++) {
             testNewContact();
         }
+    }
+
+    @Test
+    public void contactCreationWithFoto() {
+        app.goTo().homePage();
+        app.contact().initContactCreation();
+        File photo = new File("src/test/java/ru/stqa/pft/resources/stru.png");
+        app.contact().fillContactForm(new ContactData().withFirstname("Stas").withLastname("Novikov").withPhoto(photo), true);
+        app.contact().sendForm();
+        app.goTo().homePage();
+
+    }
+    @Test (enabled = false)
+    public void testCurrentDir() {
+        File currentDir = new File(".");
+        System.out.println(currentDir.getAbsolutePath());
+        File photo = new File("src/test/java/ru/stqa/pft/resources/stru.png");
+        System.out.println(photo.getAbsolutePath());
+        System.out.println(photo.exists());
+
     }
 }
 

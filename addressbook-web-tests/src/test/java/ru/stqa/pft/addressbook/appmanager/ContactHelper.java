@@ -32,6 +32,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("mobile"), contactData.getMobilePhone());
         type(By.name("home"), contactData.getHomePhone());
         type(By.name("work"), contactData.getWorkPhone());
+        attache(By.name("photo"), contactData.getPhoto());
 
 
         if (isCreation) {
