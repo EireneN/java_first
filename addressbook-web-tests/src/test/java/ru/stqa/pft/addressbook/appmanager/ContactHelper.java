@@ -26,8 +26,13 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
-        type(By.name("mobile"), contactData.getMobilePhone());
         type(By.name("email"), contactData.getEmail());
+        type(By.name("email2"), contactData.getEmailTwo());
+        type(By.name("email3"), contactData.getEmailThree());
+        type(By.name("mobile"), contactData.getMobilePhone());
+        type(By.name("home"), contactData.getHomePhone());
+        type(By.name("work"), contactData.getWorkPhone());
+
 
         if (isCreation) {
             Select new_group = new Select(wd.findElement(By.name("new_group")));
@@ -130,9 +135,13 @@ public class ContactHelper extends HelperBase {
         String home = wd.findElement(By.name("home")).getAttribute("value");
         String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
         String work = wd.findElement(By.name("work")).getAttribute("value");
+        String email = wd.findElement(By.name("email")).getAttribute("value");
+        String email2 = wd.findElement(By.name("email2")).getAttribute("value");
+        String email3 = wd.findElement(By.name("email3")).getAttribute("value");
+
         wd.navigate().back();
-        return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).
-                withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
+        return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
+        .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withEmail(email).withEmailTwo(email2).withEmailThree(email3);
 
 
     }
@@ -158,9 +167,10 @@ public class ContactHelper extends HelperBase {
 
             String lastname = cells.get(1).getText();
             String firstname = cells.get(2).getText();
+            String allEmails = cells.get(4).getText();
             String allPhones = cells.get(5).getText();
-            contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).
-                    withAllPhones(allPhones));
+            contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname)
+                    .withAllPhones(allPhones).withAllEmails(allEmails));
         }
     return contacts;
     }

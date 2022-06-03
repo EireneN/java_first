@@ -4,14 +4,18 @@ import java.util.Objects;
 
 public class ContactData {
     private int id = Integer.MAX_VALUE;
-    private  String firstname;
-    private  String lastname;
-    private  String address;
-    private  String mobilePhone;
-    private  String email;
+    private String firstname;
+    private String lastname;
+    private String address;
+    private String mobilePhone;
+    private String email;
     private String homePhone;
     private String workPhone;
     private String allPhones;
+    private String emailTwo;
+    private String emailThree;
+    private String allEmails;
+
 
 
     // with - это setter
@@ -55,8 +59,23 @@ public class ContactData {
         this.email = email;
         return this;
     }
+
     public ContactData withAllPhones(String allPhones) {
         this.allPhones = allPhones;
+        return this;
+    }
+
+    public ContactData withEmailTwo(String emailTwo) {
+        this.emailTwo = emailTwo;
+        return this;
+    }
+
+    public ContactData withEmailThree(String emailThree) {
+        this.emailThree = emailThree;
+        return this;
+    }
+    public ContactData withAllEmails(String allEmails) {
+        this.allEmails = allEmails;
         return this;
     }
 
@@ -92,33 +111,46 @@ public class ContactData {
     public String getWorkPhone() {
         return workPhone;
     }
+
     public String getAllPhones() {
-        return allPhones;
+        return allPhones;}
+
+        public String getEmailThree() {
+            return emailThree;
+        }
+
+        public String getEmailTwo() {
+            return emailTwo;
+        }
+
+        public String getAllEmails() {
+        return allEmails;
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
+        @Override
+        public boolean equals (Object o){
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ContactData that = (ContactData) o;
+            return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
+        }
+
+        @Override
+        public int hashCode () {
+            return Objects.hash(id, firstname, lastname);
+        }
+
+        @Override
+        public String toString () {
+            return "ContactData{" +
+                    "ID = '" + id + "', " +
+                    "NAME = '" + firstname + "', " +
+                    "SURNAME = '" + lastname + "', " +
+                    "ADDRESS = '" + address + "', " +
+                    "NUMBER = '" + mobilePhone + "', " +
+                    "EMAIL = '" + email + "\'" +
+                    '}';
+        }
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname);
-    }
-
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "ID = '" + id + "', " +
-                "NAME = '" + firstname + "', " +
-                "SURNAME = '" + lastname + "', " +
-                "ADDRESS = '" + address + "', " +
-                "NUMBER = '" + mobilePhone + "', " +
-                "EMAIL = '" + email + "\'" +
-                '}';
-    }
-}

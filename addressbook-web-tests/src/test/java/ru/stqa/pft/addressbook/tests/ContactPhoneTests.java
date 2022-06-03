@@ -17,7 +17,7 @@ public class ContactPhoneTests extends TestBase{
         app.goTo().homePage();
         if (! app.contact().isThereAContact()) {
             app.contact().createContact(new ContactData().withFirstname("Artemka").withLastname("Nosov").
-                    withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru"));
+                    withMobilePhone("+79523932745").withHomePhone("599-03-84").withWorkPhone("8 (812) 678 98 98"));
             app.goTo().homePage();
         }
     }
