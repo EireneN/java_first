@@ -27,7 +27,7 @@ public class ContactCreationTests extends TestBase{
         Contacts before = app.contact().allContacts();
 
         ContactData contact = new ContactData().withFirstname("Artemka").withLastname("Nosov").
-                withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru");
+                withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru").withAddress("СПб, ул. Брянцева, д.67 к.2, кв.122");
 
         app.contact().createContact(contact);
         app.goTo().homePage();
