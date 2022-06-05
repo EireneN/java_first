@@ -32,6 +32,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("mobile"), contactData.getMobilePhone());
         type(By.name("home"), contactData.getHomePhone());
         type(By.name("work"), contactData.getWorkPhone());
+        type(By.name("phone2"), contactData.getPhoneTwo());
         attache(By.name("photo"), contactData.getPhoto());
 
 
@@ -48,10 +49,7 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void selectContactById(int id) {
-
-        wd.findElement(By.cssSelector("input[value= '" + id + "' ]")).click();
-    }
+    public void selectContactById(int id) {wd.findElement(By.cssSelector("input[value= '" + id + "' ]")).click();}
 
     public void closeAlert() {
         wd.switchTo().alert().accept();
@@ -137,13 +135,14 @@ public class ContactHelper extends HelperBase {
         String home = wd.findElement(By.name("home")).getAttribute("value");
         String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
         String work = wd.findElement(By.name("work")).getAttribute("value");
+        String phone2 = wd.findElement(By.name("phone2")).getAttribute("value");
         String email = wd.findElement(By.name("email")).getAttribute("value");
         String email2 = wd.findElement(By.name("email2")).getAttribute("value");
         String email3 = wd.findElement(By.name("email3")).getAttribute("value");
 
         wd.navigate().back();
         return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
-        .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withEmail(email).withEmailTwo(email2)
+        .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withPhoneTwo(phone2).withEmail(email).withEmailTwo(email2)
                 .withEmailThree(email3).withAddress(address);
 
 

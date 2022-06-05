@@ -12,6 +12,7 @@ public class ContactData {
     private String email;
     private String homePhone;
     private String workPhone;
+    private String phoneTwo;
     private String allPhones;
     private String emailTwo;
     private String emailThree;
@@ -29,6 +30,10 @@ public class ContactData {
 
     public ContactData withHomePhone(String homePhone) {
         this.homePhone = homePhone;
+        return this;
+    }
+    public ContactData withPhoneTwo(String phoneTwo) {
+        this.phoneTwo = phoneTwo;
         return this;
     }
 
@@ -118,23 +123,25 @@ public class ContactData {
         return workPhone;
     }
 
-    public String getAllPhones() {
-        return allPhones;}
+    public String getAllPhones() {return allPhones;}
 
-        public String getEmailThree() {
+    public String getEmailThree() {
             return emailThree;
         }
 
-        public String getEmailTwo() {
+    public String getEmailTwo() {
             return emailTwo;
         }
 
-        public String getAllEmails() {
+    public String getAllEmails() {
         return allEmails;
     }
 
     public File getPhoto() {
         return photo;
+    }
+
+    public String getPhoneTwo() {return phoneTwo;
     }
 
 
