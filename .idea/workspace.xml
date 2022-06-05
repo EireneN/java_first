@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Объединение тестов по контактам в один ContactPreviewTest&#10;+ Лекция 6.5 - по лекции, но есть ошибка data provider (разбираюсь)">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/groups.xml" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/groups.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
@@ -144,7 +148,7 @@
     <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.GroupDataGenerator" />
       <module name="addressbook-web-tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="-c 3 -f src/test/java/ru/stqa/pft/resources/groups.xml -d xml" />
+      <option name="PROGRAM_PARAMETERS" value="-c 3 -f src/test/java/ru/stqa/pft/resources/groups.json -d json" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
       <extension name="coverage">
         <pattern>
@@ -283,13 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651492280460</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Созданы ContactDeletionTests, ContactModificationTests">
-      <created>1652189977308</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1652189977308</updated>
     </task>
     <task id="LOCAL-00025" summary="Лекция 3.2">
       <created>1652196766448</created>
@@ -627,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654428750575</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)">
+      <created>1654432249514</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1654432249514</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -649,7 +653,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Сравнение списков в ContactDeletionTests" />
     <MESSAGE value="Сравнение списков в ContactModificationTests" />
     <MESSAGE value="Сравнение списков в NewContactTests" />
     <MESSAGE value="Запускаем тесты для групп сиспользование BeforeSuite/AfterSuite" />
@@ -674,7 +677,8 @@
     <MESSAGE value="Лекция 6.3. Анализ опций командой строки при запуске генератора данных library jCommander" />
     <MESSAGE value="Лекция 6.4. Параметризация тестовых методов" />
     <MESSAGE value="Объединение тестов по контактам в один ContactPreviewTest&#10;+ Лекция 6.5 - по лекции, но есть ошибка data provider (разбираюсь)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Объединение тестов по контактам в один ContactPreviewTest&#10;+ Лекция 6.5 - по лекции, но есть ошибка data provider (разбираюсь)" />
+    <MESSAGE value="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
