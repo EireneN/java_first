@@ -1,0 +1,38 @@
+[
+  {
+    "firstname": "Иван 0",
+    "lastname": "Иванов 0",
+    "address": "Москва, Красная площаль д.1 0",
+    "mobilePhone": "+79213456789 0",
+    "email": "ivanov@mail.ru",
+    "homePhone": "8 (812) 657 45 45 0",
+    "workPhone": "567 89 09 0",
+    "phoneTwo": "+73211221212 0",
+    "emailTwo": "ivan99@yandex.ru 0",
+    "emailThree": "ivanov@gmail.com 0"
+  },
+  {
+    "firstname": "Иван 1",
+    "lastname": "Иванов 1",
+    "address": "Москва, Красная площаль д.1 1",
+    "mobilePhone": "+79213456789 1",
+    "email": "ivanov@mail.ru",
+    "homePhone": "8 (812) 657 45 45 1",
+    "workPhone": "567 89 09 1",
+    "phoneTwo": "+73211221212 1",
+    "emailTwo": "ivan99@yandex.ru 1",
+    "emailThree": "ivanov@gmail.com 1"
+  },
+  {
+    "firstname": "Иван 2",
+    "lastname": "Иванов 2",
+    "address": "Москва, Красная площаль д.1 2",
+    "mobilePhone": "+79213456789 2",
+    "email": "ivanov@mail.ru",
+    "homePhone": "8 (812) 657 45 45 2",
+    "workPhone": "567 89 09 2",
+    "phoneTwo": "+73211221212 2",
+    "emailTwo": "ivan99@yandex.ru 2",
+    "emailThree": "ivanov@gmail.com 2"
+  }
+]

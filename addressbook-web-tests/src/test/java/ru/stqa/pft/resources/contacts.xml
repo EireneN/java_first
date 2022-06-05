@@ -1,0 +1,41 @@
+<list>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Иван 0</firstname>
+    <lastname>Иванов 0</lastname>
+    <address>Москва, Красная площаль д.1 0</address>
+    <mobilePhone>+79213456789 0</mobilePhone>
+    <email>ivanov@mail.ru</email>
+    <homePhone>8 (812) 657 45 45 0</homePhone>
+    <workPhone>567 89 09 0</workPhone>
+    <phoneTwo>+73211221212 0</phoneTwo>
+    <emailTwo>ivan99@yandex.ru 0</emailTwo>
+    <emailThree>ivanov@gmail.com 0</emailThree>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Иван 1</firstname>
+    <lastname>Иванов 1</lastname>
+    <address>Москва, Красная площаль д.1 1</address>
+    <mobilePhone>+79213456789 1</mobilePhone>
+    <email>ivanov@mail.ru</email>
+    <homePhone>8 (812) 657 45 45 1</homePhone>
+    <workPhone>567 89 09 1</workPhone>
+    <phoneTwo>+73211221212 1</phoneTwo>
+    <emailTwo>ivan99@yandex.ru 1</emailTwo>
+    <emailThree>ivanov@gmail.com 1</emailThree>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <firstname>Иван 2</firstname>
+    <lastname>Иванов 2</lastname>
+    <address>Москва, Красная площаль д.1 2</address>
+    <mobilePhone>+79213456789 2</mobilePhone>
+    <email>ivanov@mail.ru</email>
+    <homePhone>8 (812) 657 45 45 2</homePhone>
+    <workPhone>567 89 09 2</workPhone>
+    <phoneTwo>+73211221212 2</phoneTwo>
+    <emailTwo>ivan99@yandex.ru 2</emailTwo>
+    <emailThree>ivanov@gmail.com 2</emailThree>
+  </ru.stqa.pft.addressbook.model.ContactData>
+</list>
