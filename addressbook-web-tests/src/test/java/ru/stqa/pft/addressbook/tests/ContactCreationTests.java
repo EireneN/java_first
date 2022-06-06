@@ -33,7 +33,7 @@ public class ContactCreationTests extends TestBase{
     }
     @DataProvider
     public Iterator<Object[]> validContactsFromJson() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(new File("/src/test/java/ru/stqa/pft/resources/contacts.json")));
+        BufferedReader reader = new BufferedReader(new FileReader(new File("./src/test/java/ru/stqa/pft/resources/contacts.json")));
         String json = "";
         String line = reader.readLine();
         while (line != null) {

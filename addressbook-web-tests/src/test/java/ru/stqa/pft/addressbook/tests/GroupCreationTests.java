@@ -20,36 +20,39 @@ public class GroupCreationTests extends TestBase {
 
     @DataProvider
     public Iterator<Object[]> validGroupsFromXml() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader (new File("./src/test/java/ru/stqa/pft/resources/groups.xml")));
-        String xml = "";
-        String line = reader.readLine();
-        while (line != null) {
-            xml += line;
-            line = reader.readLine();
-        }
-        XStream xstream = new XStream();
-        xstream.processAnnotations(GroupData.class);
-        List<GroupData> groups = (List<GroupData>) xstream.fromXML(xml);
-        return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+        File file = new File("./src/test/java/ru/stqa/pft/resources/groups.xml");
+        try (BufferedReader reader = new BufferedReader(new FileReader (file))) {
+            String xml = "";
+            String line = reader.readLine();
+            while (line != null) {
+                xml += line;
+                line = reader.readLine();
+            }
 
+            XStream xstream = new XStream();
+            xstream.processAnnotations(GroupData.class);
+            List<GroupData> groups = (List<GroupData>) xstream.fromXML(xml);
+            return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+        }
     }
 
     @DataProvider
     public Iterator<Object[]> validGroupsFromJson() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader (new File("/src/test/java/ru/stqa/pft/resources/groups.json")));
-        String json = "";
-        String line = reader.readLine();
-        while (line != null) {
-            json += line;
-            line = reader.readLine();
-        }
-        Gson gson = new Gson ();
-        List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>(){}.getType());  //почти тоже самое что List<GroupData>.class
+        try (BufferedReader reader = new BufferedReader(new FileReader (new File("./src/test/java/ru/stqa/pft/resources/groups.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson ();
+            List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>(){}.getType());  //почти тоже самое что List<GroupData>.class
         return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator(); // каждый объект заворачиваем в маленький массив состоящий из 1 такого элемента
-
+        }
     }
 
-    @Test (dataProvider = "validGroupsFromXml")
+
+    @Test (dataProvider = "validGroupsFromJson")
     public void testGroupCreation(GroupData group) {
             app.goTo().groupPage();
             Groups before = app.group().all();

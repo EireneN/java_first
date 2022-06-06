@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Лекция 6.7. Формат JSON&#10;+ ошибка в data provider (все еще не работает)">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/contacts.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/contacts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/contacts.xml" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_xstream_xstream_1_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-contacts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_xstream_xstream_1_4_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_x_stream_mxparser_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
     </list>
@@ -112,7 +118,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42413792" />
@@ -125,6 +131,7 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests" />
       <recent name="$PROJECT_DIR$/sandbox" />
     </key>
@@ -145,22 +152,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.ContactCreationTests.testContactCreation">
-    <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/8.0.322-zulu/zulu-8.jdk/Contents/Home" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.GroupDataGenerator" />
-      <module name="addressbook-web-tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="-c 3 -f src/test/java/ru/stqa/pft/resources/groups.xml -d xml" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook-web-tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.generators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -252,21 +243,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.GroupDataGenerator" />
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
       <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
+      <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
-        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
-        <item itemvalue="Application.GroupDataGenerator" />
+        <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
+        <item itemvalue="TestNG.ContactCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -278,13 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651492280460</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Запуск теcтов из 2х браузеров FF и Chrome">
-      <created>1652201227962</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1652201227962</updated>
     </task>
     <task id="LOCAL-00027" summary="Исправила выбор контакта для удаления">
       <created>1652260625523</created>
@@ -622,7 +616,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654433816133</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах">
+      <created>1654461586052</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1654461586052</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -644,7 +645,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Сравнение списков в NewContactTests" />
     <MESSAGE value="Запускаем тесты для групп сиспользование BeforeSuite/AfterSuite" />
     <MESSAGE value="Лекция 5.2 - улучшение читаемости кода в тестах у Групп" />
     <MESSAGE value="Лекция 5.3. Улучшение названий методов у Групп" />
@@ -669,7 +669,8 @@
     <MESSAGE value="Объединение тестов по контактам в один ContactPreviewTest&#10;+ Лекция 6.5 - по лекции, но есть ошибка data provider (разбираюсь)" />
     <MESSAGE value="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)" />
     <MESSAGE value="Лекция 6.7. Формат JSON&#10;+ ошибка в data provider (все еще не работает)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Лекция 6.7. Формат JSON&#10;+ ошибка в data provider (все еще не работает)" />
+    <MESSAGE value="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,43 +732,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java</url>
-          <line>85</line>
+          <line>84</line>
           <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="63" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
@@ -782,6 +748,7 @@
       <configuration name="TestNG">
         <watch expression="e.getCause()" language="JAVA" />
         <watch expression="xstream.fromXML(xml)" language="JAVA" />
+        <watch expression="new File(&quot;./&quot;)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
