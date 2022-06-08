@@ -1,5 +1,7 @@
 package ru.stqa.pft.addressbook.tests;
 import org.testng.annotations.*;
+
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -26,14 +28,15 @@ public class ContactPreviewTests extends TestBase {
         app.goTo().homePage();
         ContactData contact = app.contact().all().iterator().next();
         ContactData contactInfoFromEditForm = app.contact().contactInfoFromEditForm(contact);
-
+        System.out.println(contact.getAllPhones());
+        System.out.println(mergePhones(contactInfoFromEditForm));
         assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
         assertThat(contact.getAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
         assertThat(contact.getAddress(), equalTo((contactInfoFromEditForm.getAddress())));
 
     }
     private String mergePhones(ContactData contact) {
-        return Arrays.asList(contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone())
+        return Arrays.asList(contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(), contact.getPhoneTwo())
                 .stream().filter((s) -> ! s.equals("")).
                 map(ContactPreviewTests::cleaned).
                 collect(Collectors.joining("\n"));

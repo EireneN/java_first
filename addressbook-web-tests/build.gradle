@@ -14,13 +14,17 @@ dependencies {
 }
 
 task testGroups(type: Test) {
-    useTestNG {
-        suites 'src/test/resources/testng-groups.xml'
+    useTestNG() {
+       suites './src/test/java/ru/stqa/pft/resources/testng-groups.xml'
     }
 }
 
 task testContacts(type: Test) {
-    useTestNG {
-        suites 'src/test/resources/testng-contacts.xml'
+    useTestNG() {
+        suites './src/test/java/ru/stqa/pft/resources/testng-contacts.xml'
     }
 }
+
+
+
+
