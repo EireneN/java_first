@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_xstream_xstream_1_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-contacts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_xstream_xstream_1_4_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_x_stream_mxparser_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Исправила баг по лекции 6.5 -&gt; Добавила точку в путь (new File&quot;./src/test/java/ru/stqa/pft/resources/contacts.json&quot;) и для xml переустановила на старую версию xstream ('com.thoughtworks.xstream:xstream:1.4.8') с новой никак не хотел работать&#10;+ Лекция 6.8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactAddressTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactEmailTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactPhoneTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-contacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-contacts.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +141,7 @@
       <recent name="irina.jft.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests.testContactCreation">
+  <component name="RunManager" selected="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml">
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,23 +162,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
-    </configuration>
-    <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactCreationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="ContactCreationTests.testContactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
@@ -243,6 +216,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
@@ -257,17 +240,17 @@
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
       <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       <item itemvalue="TestNG.GroupCreationTests" />
-      <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
       <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
+      <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng-groups.xml" />
         <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG./Users/nosovairina/Documents/java_first/addressbook-web-tests/src/test/java/ru/stqa/pft/resources/testng.xml" />
-        <item itemvalue="TestNG.ContactCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -279,13 +262,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651492280460</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Исправила выбор контакта для удаления">
-      <created>1652260625523</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1652260625524</updated>
     </task>
     <task id="LOCAL-00028" summary="Исправила выбор контакта для удаления (убрала комментарий)">
       <created>1652260681406</created>
@@ -623,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654461586052</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Исправила баг по лекции 6.5 -&gt; Добавила точку в путь (new File&quot;./src/test/java/ru/stqa/pft/resources/contacts.json&quot;) и для xml переустановила на старую версию xstream ('com.thoughtworks.xstream:xstream:1.4.8') с новой никак не хотел работать&#10;+ Лекция 6.8">
+      <created>1654508613836</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1654508613836</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -645,7 +628,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Запускаем тесты для групп сиспользование BeforeSuite/AfterSuite" />
     <MESSAGE value="Лекция 5.2 - улучшение читаемости кода в тестах у Групп" />
     <MESSAGE value="Лекция 5.3. Улучшение названий методов у Групп" />
     <MESSAGE value="Лекция 5.4. Fluent-интерфейсы у Групп" />
@@ -670,7 +652,8 @@
     <MESSAGE value="Лекция 6.6. Формат XML&#10;+ ошибка в data provider (все еще не работает)" />
     <MESSAGE value="Лекция 6.7. Формат JSON&#10;+ ошибка в data provider (все еще не работает)" />
     <MESSAGE value="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дз №12 и №13&#10;+ ошибка в data provider (все еще не работает) в контактах и группах" />
+    <MESSAGE value="Исправила баг по лекции 6.5 -&gt; Добавила точку в путь (new File&quot;./src/test/java/ru/stqa/pft/resources/contacts.json&quot;) и для xml переустановила на старую версию xstream ('com.thoughtworks.xstream:xstream:1.4.8') с новой никак не хотел работать&#10;+ Лекция 6.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправила баг по лекции 6.5 -&gt; Добавила точку в путь (new File&quot;./src/test/java/ru/stqa/pft/resources/contacts.json&quot;) и для xml переустановила на старую версию xstream ('com.thoughtworks.xstream:xstream:1.4.8') с новой никак не хотел работать&#10;+ Лекция 6.8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
