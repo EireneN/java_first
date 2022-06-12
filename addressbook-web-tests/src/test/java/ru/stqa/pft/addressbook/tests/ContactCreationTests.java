@@ -26,11 +26,14 @@ public class ContactCreationTests extends TestBase{
     @BeforeMethod
     public static void ensurePreconditions() {
         app.goTo().groupPage();
-        if(! app.group().isThereAGroup()) {
-            app.group().create(new GroupData().withName ("test"));
+        if (app.db().groups().size() == 0) {
+            app.goTo().groupPage();
+            app.group().create(new GroupData().withName("test1"));
         }
         app.goTo().homePage();
     }
+
+
     @DataProvider
     public Iterator<Object[]> validContactsFromJson() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(new File("./src/test/java/ru/stqa/pft/resources/contacts.json")));
@@ -46,10 +49,11 @@ public class ContactCreationTests extends TestBase{
 
     }
 
-    @Test
+    @Test (enabled = false)
     public void testNewContact() throws Exception {
 
-        Contacts before = app.contact().allContacts();
+        Contacts before = app.db().contacts();
+
 
         ContactData contact = new ContactData().withFirstname("Artemka").withLastname("Nosov").
                 withAddress("SPb").withMobilePhone("+79523932745").withEmail("artemn@yandex.ru").withAddress("СПб, ул. Брянцева, д.67 к.2, кв.122");
@@ -57,7 +61,7 @@ public class ContactCreationTests extends TestBase{
         app.contact().createContact(contact);
         app.goTo().homePage();
 
-        Contacts after = app.contact().allContacts();
+        Contacts after = app.db().contacts();
         int b = before.size() +1;
         assertThat(after.size(), equalTo(b));
 
@@ -69,11 +73,11 @@ public class ContactCreationTests extends TestBase{
     @Test (dataProvider = "validContactsFromJson")
     public void testContactCreation(ContactData contact)  {
 
-        Contacts before = app.contact().allContacts();
+        Contacts before = app.db().contacts();
 
         app.contact().createContact(contact);
         app.goTo().homePage();
-        Contacts after = app.contact().allContacts();
+        Contacts after = app.db().contacts();
         int b = before.size() +1;
         assertThat(after.size(), equalTo(b));
 

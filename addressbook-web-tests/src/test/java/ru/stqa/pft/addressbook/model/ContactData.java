@@ -194,6 +194,32 @@ public class ContactData {
         return allEmails;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id
+                && Objects.equals(firstname, that.firstname)
+                && Objects.equals(lastname, that.lastname)
+                && Objects.equals(address, that.address)
+                && Objects.equals(mobilePhone, that.mobilePhone)
+                && Objects.equals(email, that.email)
+                && Objects.equals(homePhone, that.homePhone)
+                && Objects.equals(workPhone, that.workPhone)
+                && Objects.equals(phoneTwo, that.phoneTwo)
+                && Objects.equals(allPhones, that.allPhones)
+                && Objects.equals(emailTwo, that.emailTwo)
+                && Objects.equals(emailThree, that.emailThree)
+                && Objects.equals(allEmails, that.allEmails)
+                && Objects.equals(group, that.group);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstname, lastname, address, mobilePhone, email, homePhone, workPhone, phoneTwo, allPhones, emailTwo, emailThree, allEmails, group);
+    }
+
     public File getPhoto() {
         return new File(photo);
     }
@@ -202,20 +228,7 @@ public class ContactData {
     }
 
 
-        @Override
-        public boolean equals (Object o){
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            ContactData that = (ContactData) o;
-            return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
-        }
-
-        @Override
-        public int hashCode () {
-            return Objects.hash(id, firstname, lastname);
-        }
-
-        @Override
+    @Override
         public String toString () {
             return "ContactData{" +
                     "ID = '" + id + "', " +
@@ -223,7 +236,15 @@ public class ContactData {
                     "SURNAME = '" + lastname + "', " +
                     "ADDRESS = '" + address + "', " +
                     "NUMBER = '" + mobilePhone + "', " +
-                    "EMAIL = '" + email + "\'" +
+                    "EMAIL = '" + email + "', " +
+                    "homePhone = '" + homePhone  + "', " +
+                    "workPhone = '" + workPhone  + "', " +
+                    "phoneTwo = '" + phoneTwo  + "', " +
+                    "emailTwo = '" + emailTwo  + "', " +
+                    "allPhones = '" + allPhones  + "', " +
+                    "emailThree = '" + emailThree  + "', " +
+                    "allEmails = '" + allEmails  + "', " +
+                    "group = '" + group  + "', " +
                     '}';
         }
     }
