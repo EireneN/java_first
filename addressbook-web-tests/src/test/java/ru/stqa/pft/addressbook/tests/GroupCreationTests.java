@@ -18,6 +18,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GroupCreationTests extends TestBase {
 
+
+
     @DataProvider
     public Iterator<Object[]> validGroupsFromXml() throws IOException {
         File file = new File("./src/test/java/ru/stqa/pft/resources/groups.xml");
