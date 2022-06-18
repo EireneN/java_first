@@ -1,5 +1,6 @@
 package ru.stqa.pft.addressbook.tests;
 
+import ch.qos.logback.classic.util.ContextInitializer;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.remote.BrowserType;
@@ -21,6 +22,7 @@ public class TestBase {
 
     @BeforeSuite(alwaysRun = true)
     public void setUp() throws Exception {
+//        System.setProperty(ContextInitializer.CONFIG_FILE_PROPERTY, "./src/test/java/ru/stqa/pft/resources/logback-test.xml");
         app.init();
     }
 

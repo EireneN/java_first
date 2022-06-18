@@ -5,51 +5,53 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
-@Table(name="addressbook")
+@Table(name = "addressbook")
 
 public class ContactData {
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     private int id = Integer.MAX_VALUE;
 
     @Expose
-    @Column(name="firstname")
+    @Column(name = "firstname")
     private String firstname;
 
     @Expose
-    @Column(name="lastname")
+    @Column(name = "lastname")
     private String lastname;
 
     @Expose
-    @Column(name="address")
+    @Column(name = "address")
     @Type(type = "text")
     private String address;
 
     @Expose
-    @Column(name="mobile")
+    @Column(name = "mobile")
     @Type(type = "text")
     private String mobilePhone;
 
     @Expose
-    @Column(name="email")
+    @Column(name = "email")
     @Type(type = "text")
     private String email;
 
     @Expose
-    @Column(name="home")
+    @Column(name = "home")
     @Type(type = "text")
     private String homePhone;
 
     @Expose
-    @Column(name="work")
+    @Column(name = "work")
     @Type(type = "text")
     private String workPhone;
 
     @Expose
-    @Column(name="phone2")
+    @Column(name = "phone2")
     @Type(type = "text")
     private String phoneTwo;
 
@@ -57,25 +59,26 @@ public class ContactData {
     private String allPhones;
 
     @Expose
-    @Column(name="email2")
+    @Column(name = "email2")
     @Type(type = "text")
     private String emailTwo;
 
     @Expose
-    @Column(name="email3")
+    @Column(name = "email3")
     @Type(type = "text")
     private String emailThree;
 
     @Transient
     private String allEmails;
 
-    @Column(name="photo")
+    @Column(name = "photo")
     @Type(type = "text")
     private String photo;
 
-    @Transient
-    private String group;
-
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "address_in_groups",
+            joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<GroupData> groups = new HashSet<GroupData>();
 
 
     // with - это setter
@@ -89,6 +92,7 @@ public class ContactData {
         this.homePhone = homePhone;
         return this;
     }
+
     public ContactData withPhoneTwo(String phoneTwo) {
         this.phoneTwo = phoneTwo;
         return this;
@@ -138,10 +142,12 @@ public class ContactData {
         this.emailThree = emailThree;
         return this;
     }
+
     public ContactData withAllEmails(String allEmails) {
         this.allEmails = allEmails;
         return this;
     }
+
     public ContactData withPhoto(File photo) {
         this.photo = photo.getPath();
         return this;
@@ -180,15 +186,17 @@ public class ContactData {
         return workPhone;
     }
 
-    public String getAllPhones() {return allPhones;}
+    public String getAllPhones() {
+        return allPhones;
+    }
 
     public String getEmailThree() {
-            return emailThree;
-        }
+        return emailThree;
+    }
 
     public String getEmailTwo() {
-            return emailTwo;
-        }
+        return emailTwo;
+    }
 
     public String getAllEmails() {
         return allEmails;
@@ -212,40 +220,80 @@ public class ContactData {
                 && Objects.equals(emailTwo, that.emailTwo)
                 && Objects.equals(emailThree, that.emailThree)
                 && Objects.equals(allEmails, that.allEmails)
-                && Objects.equals(group, that.group);
+                && Objects.equals(groups, that.groups);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname, address, mobilePhone, email, homePhone, workPhone, phoneTwo, allPhones, emailTwo, emailThree, allEmails, group);
+        return Objects.hash(id, firstname, lastname, address, mobilePhone, email, homePhone, workPhone,
+                phoneTwo, allPhones, emailTwo, emailThree, allEmails, groups);
     }
 
     public File getPhoto() {
         return new File(photo);
     }
 
-    public String getPhoneTwo() {return phoneTwo;
+    public String getPhoneTwo() {
+        return phoneTwo;
     }
 
+
+    public Groups getGroups() {
+        return new Groups(groups);
+    }
+
+    public void setGroups(Groups groups) {
+        this.groups = groups ;
+    }
+
+    public void withGroups(Set<GroupData> groups) {
+        this.groups = groups ;
+    }
 
     @Override
-        public String toString () {
-            return "ContactData{" +
-                    "ID = '" + id + "', " +
-                    "NAME = '" + firstname + "', " +
-                    "SURNAME = '" + lastname + "', " +
-                    "ADDRESS = '" + address + "', " +
-                    "NUMBER = '" + mobilePhone + "', " +
-                    "EMAIL = '" + email + "', " +
-                    "homePhone = '" + homePhone  + "', " +
-                    "workPhone = '" + workPhone  + "', " +
-                    "phoneTwo = '" + phoneTwo  + "', " +
-                    "emailTwo = '" + emailTwo  + "', " +
-                    "allPhones = '" + allPhones  + "', " +
-                    "emailThree = '" + emailThree  + "', " +
-                    "allEmails = '" + allEmails  + "', " +
-                    "group = '" + group  + "', " +
-                    '}';
-        }
+    public String toString() {
+        return "ContactData{" +
+                "ID = '" + id + "', " +
+                "NAME = '" + firstname + "', " +
+                "SURNAME = '" + lastname + "', " +
+                "ADDRESS = '" + address + "', " +
+                "NUMBER = '" + mobilePhone + "', " +
+                "EMAIL = '" + email + "', " +
+                "homePhone = '" + homePhone + "', " +
+                "workPhone = '" + workPhone + "', " +
+                "phoneTwo = '" + phoneTwo + "', " +
+                "emailTwo = '" + emailTwo + "', " +
+                "allPhones = '" + allPhones + "', " +
+                "emailThree = '" + emailThree + "', " +
+                "allEmails = '" + allEmails + "', " +
+                "groups = '" + groups + "', " +
+                '}';
     }
+
+    public ContactData inGroup(GroupData group) {
+        groups.add(group);
+        return this;
+    }
+
+    public ContactData copy() {
+        ContactData copy = new ContactData();
+        copy
+                .withId(id)
+                .withFirstname(firstname)
+                .withLastname(lastname)
+                .withAddress(address)
+                .withMobilePhone(mobilePhone)
+                .withEmail(email)
+                .withHomePhone(homePhone)
+                .withWorkPhone(workPhone)
+                .withPhoneTwo(phoneTwo)
+                .withEmailTwo(emailTwo)
+                .withEmailThree(emailThree)
+                .withAllPhones(allPhones)
+                .withAllEmails(allEmails)
+                .withGroups(groups);
+        return copy;
+    }
+
+}
 

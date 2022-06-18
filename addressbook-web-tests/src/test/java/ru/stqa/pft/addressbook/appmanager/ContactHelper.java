@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 
 import java.util.*;
@@ -21,7 +22,7 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("add new"));
     }
 
-    public void fillContactForm(ContactData contactData, boolean isCreation) {
+    public void fillContactForm(ContactData contactData, boolean creation) {
 
         type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"), contactData.getLastname());
@@ -36,9 +37,11 @@ public class ContactHelper extends HelperBase {
        // attache(By.name("photo"), contactData.getPhoto());
 
 
-        if (isCreation) {
-            Select new_group = new Select(wd.findElement(By.name("new_group")));
-            new_group.getFirstSelectedOption();
+        if (creation) {
+            if (contactData.getGroups().size() > 0) {
+                Assert.assertTrue(contactData.getGroups().size() == 1);
+                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
+            }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -50,6 +53,17 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContactById(int id) {wd.findElement(By.cssSelector("input[value= '" + id + "' ]")).click();}
+
+    public void selectGroupByIdAndDropDownName(int id, String dropDownName) {
+        List<WebElement> elements = wd.findElements(By.name(dropDownName)).get(0).findElements(By.cssSelector("option"));
+        for (WebElement e : elements) {
+            String elementId = e.getAttribute("value");
+            if (elementId.equals(String.valueOf(id))) {
+                e.click();
+                return;
+            }
+        }
+    }
 
     public void closeAlert() {
         wd.switchTo().alert().accept();
@@ -127,6 +141,12 @@ public class ContactHelper extends HelperBase {
         closeAlert();
     }
 
+    public void delete(int contactId) {
+        selectContactById(contactId);
+        deleteContact();
+        closeAlert();
+    }
+
     public ContactData contactInfoFromEditForm(ContactData contact) {
         initContactModificationById(contact.getId());
         String firstname = wd.findElement(By.name("firstname")).getAttribute("value");
@@ -173,13 +193,25 @@ public class ContactHelper extends HelperBase {
             String allEmails = cells.get(4).getText();
             String allPhones = cells.get(5).getText();
 
+
             contacts.add(new ContactData().withId(id).withFirstname(firstname).withAddress(address).withLastname(lastname)
-                    .withAllPhones(allPhones).withAllEmails(allEmails));
+                    .withAllPhones(allPhones).withAllEmails(allEmails)
+            );
         }
     return contacts;
     }
 
 
+    public void clickAdd() {
+        wd.findElement(By.name("add")).click();
+    }
+
+    public void selectContact() {
+        wd.findElement(By.name("selected[]")).click();}
+
+    public void clickRemove() {
+        wd.findElement(By.name("remove")).click();
+    }
 }
 
 

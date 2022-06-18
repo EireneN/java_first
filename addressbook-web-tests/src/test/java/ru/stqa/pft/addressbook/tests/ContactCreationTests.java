@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -115,5 +116,19 @@ public class ContactCreationTests extends TestBase{
         System.out.println(photo.exists());
 
     }
+    @Test
+    public void testContactCreationL()  {
+        Groups groups = app.db().groups();
+        File photo = new File("src/test/java/ru/stqa/pft/resources/stru.png");
+        ContactData newContact = new ContactData().withFirstname("Stas").withLastname("Novikov").withPhoto(photo)
+                        .inGroup(groups.iterator().next());
+        app.goTo().homePage();
+        app.contact().initContactCreation();
+        app.contact().fillContactForm(newContact, true);
+        app.contact().sendForm();
+        app.goTo().homePage();
+
+    }
+
 }
 
