@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Дз №16">
-      <change afterPath="$PROJECT_DIR$/mantis-tests/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d63a3979-a9d5-46f4-8033-71cba80f3e12" name="Changes" comment="Добавлен новый модуль для тестов Mantis">
+      <change afterPath="$PROJECT_DIR$/mantis-tests/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/HttpSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/LoginTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/gh.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sandbox.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sandbox.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sandbox.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +114,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mantis-tests/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mantis-tests" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42413792" />
@@ -137,6 +127,7 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mantis-tests" />
       <recent name="$PROJECT_DIR$/mantis-tests/src/test/resources" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests" />
@@ -146,11 +137,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/resources" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests/src/test/resourses" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests/src/main/resourses/chapters/configuration" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/resources" />
       <recent name="$PROJECT_DIR$/addressbook-web-tests/src/main/resourses" />
-      <recent name="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.stqa.pft.addressbook" />
@@ -164,7 +155,30 @@
       <recent name="ru.stqa.pft.addressbook.tests.group" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DeleteContactFromGroup">
+  <component name="RunManager" selected="TestNG.LoginTests.testLogin">
+    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mantis-tests" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.mantis.tests.LoginTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="addressbook-web-tests [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,41 +199,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
-    </configuration>
-    <configuration name="AddContactInGroup" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddContactInGroup" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddContactInGroup.AddContactInGroup" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.AddContactInGroup" />
-      <option name="METHOD_NAME" value="AddContactInGroup" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="AddContactInGroup.addContactInGroup" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
@@ -292,21 +271,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.mantis.tests.LoginTests" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.addressbook-web-tests [run]" />
-      <item itemvalue="TestNG.AddContactInGroup.AddContactInGroup" />
       <item itemvalue="TestNG.AddContactInGroup.addContactInGroup" />
-      <item itemvalue="TestNG.AddContactInGroup" />
       <item itemvalue="TestNG.DeleteContactFromGroup.deleteContactFromGroup" />
       <item itemvalue="TestNG.DeleteContactFromGroup" />
+      <item itemvalue="Gradle.LoginTests" />
+      <item itemvalue="TestNG.LoginTests.testLogin" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.testLogin" />
+        <item itemvalue="Gradle.LoginTests" />
         <item itemvalue="TestNG.DeleteContactFromGroup" />
         <item itemvalue="TestNG.DeleteContactFromGroup.deleteContactFromGroup" />
         <item itemvalue="TestNG.AddContactInGroup.addContactInGroup" />
-        <item itemvalue="TestNG.AddContactInGroup" />
-        <item itemvalue="TestNG.AddContactInGroup.AddContactInGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -318,13 +315,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651492280460</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Добавлена проверка наличия группы/выбора при создании нового контакта + урок 4.1">
-      <created>1652823968271</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1652823968271</updated>
     </task>
     <task id="LOCAL-00037" summary="Удалено поле &quot;группа&quot; из ContactData и из тестов">
       <created>1652894051142</created>
@@ -662,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655554667677</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Добавлен новый модуль для тестов Mantis">
+      <created>1655584422494</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1655584422494</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -684,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change List to Set in Contacts" />
     <MESSAGE value="Hamcrest in Contacts" />
     <MESSAGE value="Hamcrest in Contacts 2" />
     <MESSAGE value="Add GroupCache" />
@@ -709,7 +705,8 @@
     <MESSAGE value="Дз №15 - проверка данных, загружаемых из БД для создания, удаления, модификации групп и контактов" />
     <MESSAGE value="Лекция 7.5. Отключаемые проверки UI" />
     <MESSAGE value="Дз №16" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дз №16" />
+    <MESSAGE value="Добавлен новый модуль для тестов Mantis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен новый модуль для тестов Mantis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,6 +776,11 @@
           <line>78</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/HttpSession.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -787,6 +789,7 @@
       </configuration>
       <configuration name="TestNG">
         <watch expression="before.delegate.iterator().next().toString()" language="JAVA" />
+        <watch expression="String.format(&quot;&lt;span class=\&quot;italic\&quot;&gt;%s&lt;/span&gt;&quot;, username)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

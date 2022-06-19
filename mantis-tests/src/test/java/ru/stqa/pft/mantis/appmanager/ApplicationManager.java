@@ -45,4 +45,16 @@ public class ApplicationManager {
     public void stop() {
         wd.quit();
     }
+
+    public HttpSession newSession() {
+        return new HttpSession(this);
+    }
+    // инициирует помощника при каждом обращении.
+    // Можно писать сложный тест где работа идет под несколькими учетными записями.
+    // Принимает на вход объект типо app
+
+
+    public String getProperty(String key) {
+      return properties.getProperty(key);
+    }
 }
